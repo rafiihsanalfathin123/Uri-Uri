@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="548" viewBox="0 0 1280 548">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#243447} .label{font-family:monospace;font-size:14px}</style>
+<text x="24" y="30" font-size="20" font-weight="bold">Rejection sampler: stable coefficient while output is stalled</text>
+<text x="24" y="54" font-size="13">Actual Icarus VCD transitions · source: expanda_sampler.vcd · testbench clock: 10 ns</text>
+<path d="M180.00 78V506" stroke="#e4eaf0"/>
+<text x="180.00" y="526" text-anchor="middle" font-size="12">0.07 µs</text>
+<path d="M307.50 78V506" stroke="#e4eaf0"/>
+<text x="307.50" y="526" text-anchor="middle" font-size="12">0.12 µs</text>
+<path d="M435.00 78V506" stroke="#e4eaf0"/>
+<text x="435.00" y="526" text-anchor="middle" font-size="12">0.17 µs</text>
+<path d="M562.50 78V506" stroke="#e4eaf0"/>
+<text x="562.50" y="526" text-anchor="middle" font-size="12">0.21 µs</text>
+<path d="M690.00 78V506" stroke="#e4eaf0"/>
+<text x="690.00" y="526" text-anchor="middle" font-size="12">0.26 µs</text>
+<path d="M817.50 78V506" stroke="#e4eaf0"/>
+<text x="817.50" y="526" text-anchor="middle" font-size="12">0.31 µs</text>
+<path d="M945.00 78V506" stroke="#e4eaf0"/>
+<text x="945.00" y="526" text-anchor="middle" font-size="12">0.35 µs</text>
+<path d="M1072.50 78V506" stroke="#e4eaf0"/>
+<text x="1072.50" y="526" text-anchor="middle" font-size="12">0.40 µs</text>
+<path d="M1200.00 78V506" stroke="#e4eaf0"/>
+<text x="1200.00" y="526" text-anchor="middle" font-size="12">0.45 µs</text>
+<text x="18" y="108" class="label">clk</text>
+<path d="M180.00,117H193.42V95H206.84V117H220.26V95H233.68V117H247.11V95H260.53V117H273.95V95H287.37V117H300.79V95H314.21V117H327.63V95H341.05V117H354.47V95H367.89V117H381.32V95H394.74V117H408.16V95H421.58V117H435.00V95H448.42V117H461.84V95H475.26V117H488.68V95H502.11V117H515.53V95H528.95V117H542.37V95H555.79V117H569.21V95H582.63V117H596.05V95H609.47V117H622.89V95H636.32V117H649.74V95H663.16V117H676.58V95H690.00V117H703.42V95H716.84V117H730.26V95H743.68V117H757.11V95H770.53V117H783.95V95H797.37V117H810.79V95H824.21V117H837.63V95H851.05V117H864.47V95H877.89V117H891.32V95H904.74V117H918.16V95H931.58V117H945.00V95H958.42V117H971.84V95H985.26V117H998.68V95H1012.11V117H1025.53V95H1038.95V117H1052.37V95H1065.79V117H1079.21V95H1092.63V117H1106.05V95H1119.47V117H1132.89V95H1146.32V117H1159.74V95H1173.16V117H1186.58V95H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="158" class="label">byte_valid</text>
+<path d="M180.00,167H206.84V145H222.95V167H233.68V145H249.79V167H260.53V145H276.63V167H287.37V145H303.47V167H314.21V145H330.32V167H341.05V145H357.16V167H394.74V145H410.84V167H421.58V145H437.68V167H448.42V145H464.53V167H475.26V145H491.37V167H502.11V145H518.21V167H528.95V145H545.05V167H582.63V145H786.63V167H797.37V145H813.47V167H824.21V145H840.32V167H851.05V145H894.00V167H904.74V145H920.84V167H958.42V145H974.53V167H985.26V145H1028.21V167H1038.95V145H1055.05V167H1065.79V145H1081.89V167H1092.63V145H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="208" class="label">byte_ready</text>
+<path d="M180.00,217H193.42V195H542.37V217H757.11V195H837.63V217H864.47V195H971.84V217H998.68V195H1079.21V217H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="258" class="label">byte_data</text>
+<path d="M180.00,245H206.84M180.00,267H206.84M180.00,245V267" stroke="#315caa" fill="none"/>
+<path d="M206.84,245H233.68M206.84,267H233.68M206.84,245V267" stroke="#315caa" fill="none"/>
+<path d="M233.68,245H260.53M233.68,267H260.53M233.68,245V267" stroke="#315caa" fill="none"/>
+<path d="M260.53,245H287.37M260.53,267H287.37M260.53,245V267" stroke="#315caa" fill="none"/>
+<path d="M287.37,245H314.21M287.37,267H314.21M287.37,245V267" stroke="#315caa" fill="none"/>
+<path d="M314.21,245H341.05M314.21,267H341.05M314.21,245V267" stroke="#315caa" fill="none"/>
+<path d="M341.05,245H394.74M341.05,267H394.74M341.05,245V267" stroke="#315caa" fill="none"/>
+<text x="367.89" y="261" text-anchor="middle" class="label">7F</text>
+<path d="M394.74,245H475.26M394.74,267H475.26M394.74,245V267" stroke="#315caa" fill="none"/>
+<text x="435.00" y="261" text-anchor="middle" class="label">FF</text>
+<path d="M475.26,245H528.95M475.26,267H528.95M475.26,245V267" stroke="#315caa" fill="none"/>
+<text x="502.11" y="261" text-anchor="middle" class="label">00</text>
+<path d="M528.95,245H582.63M528.95,267H582.63M528.95,245V267" stroke="#315caa" fill="none"/>
+<text x="555.79" y="261" text-anchor="middle" class="label">80</text>
+<path d="M582.63,245H797.37M582.63,267H797.37M582.63,245V267" stroke="#315caa" fill="none"/>
+<text x="690.00" y="261" text-anchor="middle" class="label">00</text>
+<path d="M797.37,245H824.21M797.37,267H824.21M797.37,245V267" stroke="#315caa" fill="none"/>
+<path d="M824.21,245H851.05M824.21,267H851.05M824.21,245V267" stroke="#315caa" fill="none"/>
+<path d="M851.05,245H985.26M851.05,267H985.26M851.05,245V267" stroke="#315caa" fill="none"/>
+<text x="918.16" y="261" text-anchor="middle" class="label">00</text>
+<path d="M985.26,245H1038.95M985.26,267H1038.95M985.26,245V267" stroke="#315caa" fill="none"/>
+<text x="1012.11" y="261" text-anchor="middle" class="label">01</text>
+<path d="M1038.95,245H1065.79M1038.95,267H1065.79M1038.95,245V267" stroke="#315caa" fill="none"/>
+<path d="M1065.79,245H1092.63M1065.79,267H1092.63M1065.79,245V267" stroke="#315caa" fill="none"/>
+<path d="M1092.63,245H1200.00M1092.63,267H1200.00M1092.63,245V267" stroke="#315caa" fill="none"/>
+<text x="1146.32" y="261" text-anchor="middle" class="label">02</text>
+<text x="18" y="308" class="label">coeff_valid</text>
+<path d="M180.00,317H542.37V295H757.11V317H837.63V295H864.47V317H971.84V295H998.68V317H1079.21V295H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="358" class="label">coeff_ready</text>
+<path d="M180.00,367H233.68V345H502.11V367H743.68V345H1012.11V367H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="408" class="label">coeff</text>
+<path d="M180.00,395H837.63M180.00,417H837.63M180.00,395V417" stroke="#315caa" fill="none"/>
+<text x="508.82" y="411" text-anchor="middle" class="label">000000</text>
+<path d="M837.63,395H971.84M837.63,417H971.84M837.63,395V417" stroke="#315caa" fill="none"/>
+<text x="904.74" y="411" text-anchor="middle" class="label">7FE000</text>
+<path d="M971.84,395H1079.21M971.84,417H1079.21M971.84,395V417" stroke="#315caa" fill="none"/>
+<text x="1025.53" y="411" text-anchor="middle" class="label">000000</text>
+<path d="M1079.21,395H1200.00M1079.21,417H1200.00M1079.21,395V417" stroke="#315caa" fill="none"/>
+<text x="1139.61" y="411" text-anchor="middle" class="label">000001</text>
+<text x="18" y="458" class="label">busy</text>
+<path d="M180.00,467H193.42V445H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "tool": "Quartus Prime Lite 23.1std.1 Build 993",
+  "device": "5CSEBA6U23I7",
+  "clock_target_MHz": 100,
+  "scope": "Out-of-context IP: virtual data pins, automatically placed physical clock, unconstrained external I/O",
+  "results": [
+    {
+      "variant": "stream",
+      "ALMs": 5881,
+      "registers": 2815,
+      "payload_bits": 0,
+      "M10K": 0,
+      "minimum_reported_Fmax_MHz": 105.35,
+      "minimum_setup_slack_ns": 0.508,
+      "minimum_hold_slack_ns": 0.135,
+      "fit_status": "Fitter Status : Successful - Thu Oct  8 19:48:55 2026",
+      "unconstrained_input_ports": 132,
+      "unconstrained_output_ports": 146
+    },
+    {
+      "variant": "row",
+      "ALMs": 5985,
+      "registers": 2825,
+      "payload_bits": 23552,
+      "M10K": 4,
+      "minimum_reported_Fmax_MHz": 105.2,
+      "minimum_setup_slack_ns": 0.494,
+      "minimum_hold_slack_ns": 0.142,
+      "fit_status": "Fitter Status : Successful - Thu Oct  8 19:50:30 2026",
+      "unconstrained_input_ports": 143,
+      "unconstrained_output_ports": 138
+    },
+    {
+      "variant": "full",
+      "ALMs": 5922,
+      "registers": 2827,
+      "payload_bits": 94208,
+      "M10K": 13,
+      "minimum_reported_Fmax_MHz": 107.62,
+      "minimum_setup_slack_ns": 0.708,
+      "minimum_hold_slack_ns": 0.132,
+      "fit_status": "Fitter Status : Successful - Thu Oct  8 19:51:52 2026",
+      "unconstrained_input_ports": 143,
+      "unconstrained_output_ports": 138
+    }
+  ],
+  "M10K_reduction_percent": 69.23076923076923,
+  "RTL_sha256": {
+    "expanda_buffered_top.v": "497cc8e7ceb2adcf8d43d8dc2bae33abad6519acc269f45a3e7e65f2ebbc5a52",
+    "expanda_controller.v": "3f81fc86bc9b85c03a002f75fe6c97a341dc0c0a7bf09185fd5239dd9a485ed0",
+    "expanda_integrated_top.v": "7555e80b8d8c346cfb354c495b79baa2cf1745c3cc24b9ea71b4aba61e1843f4",
+    "expanda_matrix_buffer.v": "fd87cc27a8e7e17f4e1056e86b5c3430b101305afc52d4523ea9e68ba6b40b6d",
+    "expanda_output_packer.v": "87af6a42eda9ec25dccafb916086c68d190b3f2263f5bb0539e79670616d53cd",
+    "expanda_rej_ntt_poly.v": "0f208d30d5e341c8383360d4d6f5f501bc3634f983b4bcb24bdf32d950a0e200",
+    "expanda_rejection_sampler.v": "dab275bc4e74dd32804680b6f7c2529581f9265d3948765818632a7831a1e257",
+    "expanda_row_buffer.v": "02a969f82ac04ebbab749255bf6fdbf6b82193a12223a6511af7536c18ccdb03",
+    "expanda_seed_absorb.v": "118d6def0cb727b498de5380655c66b97887afc2865dbaaddaa45099e556f8d0",
+    "expanda_shake128.v": "fe579d9b66320db96996f9488a9a4c794402dc4e7692f682a68c5d87b80f7389",
+    "expanda_shake64_top.v": "4caa65667907aec2df723c4dd5eee0733b5e2d775c98dac9029b33b14d31a9c0",
+    "expanda_stream_top.v": "1aad591ec3a1528a24b346cb06e20bb0077a908d33c53e523b4bc663d200f26b",
+    "expanda_top.v": "8d22ebdf16aa5eb802f979fe2fb93163871cd10fc2bf225e014901a940baaa92",
+    "expanda_word_to_byte.v": "ec350aad1c1df6f5648405102fd0d68d3be09f406131f6fd10984c3f140e14c3",
+    "expanda_xof_buffer.v": "9a3a8bc7f95ece38ced037089aded367cd4d4e952f8c8c63c00f57e6e017fdb6"
+  }
+}

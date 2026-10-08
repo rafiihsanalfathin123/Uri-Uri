@@ -1,0 +1,12 @@
+{
+  "reference": "Python hashlib.shake_128, rho || col || row",
+  "seed_bytes_hex": [
+    "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "0000000000000000000000000000000000000000000000000000000000000000",
+    "87ea2a4cfedcedb40b09d7e6d7944f8b9b27aa9c77fe8c53ace683db77a2174b"
+  ],
+  "jobs": 3,
+  "polynomials_per_job": 16,
+  "coefficients": 12288,
+  "xof_prefix_bytes_per_polynomial": 1200
+}

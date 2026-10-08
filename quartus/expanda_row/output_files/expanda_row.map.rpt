@@ -1,0 +1,1069 @@
+Analysis & Synthesis report for expanda_row
+Thu Oct  8 19:47:31 2026
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Default Parameter Settings
+  5. Parallel Compilation
+  6. Analysis & Synthesis Source Files Read
+  7. Analysis & Synthesis Resource Usage Summary
+  8. Analysis & Synthesis Resource Utilization by Entity
+  9. Analysis & Synthesis RAM Summary
+ 10. State Machine - |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|fsm
+ 11. State Machine - |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|perm_return
+ 12. State Machine - |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|state
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0|altsyncram_s6q1:auto_generated
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |expanda_buffered_top
+ 19. Parameter Settings for User Entity Instance: expanda_top:generator
+ 20. Parameter Settings for User Entity Instance: expanda_top:generator|expanda_shake128:shake
+ 21. Parameter Settings for User Entity Instance: expanda_matrix_buffer:buffer
+ 22. Parameter Settings for Inferred Entity Instance: expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "expanda_top:generator|expanda_shake128:shake"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct  8 19:47:31 2026          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                   ; expanda_row                                    ;
+; Top-level Entity Name           ; expanda_buffered_top                           ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 2825                                           ;
+; Total pins                      ; 1                                              ;
+; Total virtual pins              ; 281                                            ;
+; Total block memory bits         ; 23,552                                         ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                               ;
++---------------------------------------------------------------------------------+----------------------+--------------------+
+; Option                                                                          ; Setting              ; Default Value      ;
++---------------------------------------------------------------------------------+----------------------+--------------------+
+; Device                                                                          ; 5CSEBA6U23I7         ;                    ;
+; Top-level entity name                                                           ; expanda_buffered_top ; expanda_row        ;
+; Family name                                                                     ; Cyclone V            ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; 2                    ;                    ;
+; Use smart compilation                                                           ; Off                  ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                   ; On                 ;
+; Enable compact report table                                                     ; Off                  ; Off                ;
+; Restructure Multiplexers                                                        ; Auto                 ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                  ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                  ; Off                ;
+; Preserve fewer node names                                                       ; On                   ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable               ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001         ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993            ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto                 ; Auto               ;
+; Safe State Machine                                                              ; Off                  ; Off                ;
+; Extract Verilog State Machines                                                  ; On                   ; On                 ;
+; Extract VHDL State Machines                                                     ; On                   ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                  ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000                 ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                  ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                   ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                   ; On                 ;
+; Parallel Synthesis                                                              ; On                   ; On                 ;
+; DSP Block Balancing                                                             ; Auto                 ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                   ; On                 ;
+; Power-Up Don't Care                                                             ; On                   ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                  ; Off                ;
+; Remove Duplicate Registers                                                      ; On                   ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                  ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                  ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                  ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                  ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                  ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                   ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                  ; Off                ;
+; Optimization Technique                                                          ; Balanced             ; Balanced           ;
+; Carry Chain Length                                                              ; 70                   ; 70                 ;
+; Auto Carry Chains                                                               ; On                   ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                   ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                  ; Off                ;
+; Auto ROM Replacement                                                            ; On                   ; On                 ;
+; Auto RAM Replacement                                                            ; On                   ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                   ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto                 ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                 ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                   ; On                 ;
+; Strict RAM Replacement                                                          ; Off                  ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                   ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                  ; Off                ;
+; Auto Resource Sharing                                                           ; Off                  ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                  ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                  ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                  ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                   ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                  ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                   ; On                 ;
+; Report Parameter Settings                                                       ; On                   ; On                 ;
+; Report Source Assignments                                                       ; On                   ; On                 ;
+; Report Connectivity Checks                                                      ; On                   ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                  ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                    ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation   ; Normal compilation ;
+; HDL message level                                                               ; Level2               ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                  ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                 ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                 ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                  ; 100                ;
+; Clock MUX Protection                                                            ; On                   ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                  ; Off                ;
+; Block Design Naming                                                             ; Auto                 ; Auto               ;
+; SDC constraint protection                                                       ; Off                  ; Off                ;
+; Synthesis Effort                                                                ; Auto                 ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                   ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                  ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium               ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                 ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                   ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                   ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                  ; Off                ;
++---------------------------------------------------------------------------------+----------------------+--------------------+
+
+
++-------------------------------------------------+
+; Analysis & Synthesis Default Parameter Settings ;
++----------------+--------------------------------+
+; Name           ; Setting                        ;
++----------------+--------------------------------+
+; PARALLEL_LANES ; 5                              ;
+; ROWS           ; 1                              ;
++----------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.09        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   9.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++-----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
++-----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; ../../rtl/expanda_controller.v    ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_controller.v                     ;         ;
+; ../../rtl/expanda_seed_absorb.v   ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_seed_absorb.v                    ;         ;
+; ../../rtl/expanda_shake128.v      ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_shake128.v                       ;         ;
+; ../../rtl/expanda_xof_buffer.v    ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_xof_buffer.v                     ;         ;
+; ../../rtl/expanda_rej_ntt_poly.v  ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_rej_ntt_poly.v                   ;         ;
+; ../../rtl/expanda_output_packer.v ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_output_packer.v                  ;         ;
+; ../../rtl/expanda_top.v           ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v                            ;         ;
+; ../../rtl/expanda_matrix_buffer.v ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_matrix_buffer.v                  ;         ;
+; ../../rtl/expanda_buffered_top.v  ; yes             ; User Verilog HDL File        ; C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v                   ;         ;
+; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal231.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc        ;         ;
+; a_rdenreg.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_s6q1.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Angelina/Documents/ML_DSA/quartus/expanda_row/db/altsyncram_s6q1.tdf   ;         ;
++-----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 5626      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 7980      ;
+;     -- 7 input functions                    ; 101       ;
+;     -- 6 input functions                    ; 2744      ;
+;     -- 5 input functions                    ; 3664      ;
+;     -- 4 input functions                    ; 1096      ;
+;     -- <=3 input functions                  ; 375       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 2825      ;
+;                                             ;           ;
+; Virtual pins                                ; 281       ;
+; I/O pins                                    ; 1         ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 23552     ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2953      ;
+; Total fan-out                               ; 54462     ;
+; Average fan-out                             ; 4.86      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |expanda_buffered_top                     ; 7980 (4)            ; 2825 (0)                  ; 23552             ; 0          ; 1    ; 281          ; |expanda_buffered_top                                                                                     ; expanda_buffered_top  ; work         ;
+;    |expanda_matrix_buffer:buffer|         ; 24 (24)             ; 12 (12)                   ; 23552             ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_matrix_buffer:buffer                                                        ; expanda_matrix_buffer ; work         ;
+;       |altsyncram:memory_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 23552             ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0                                ; altsyncram            ; work         ;
+;          |altsyncram_s6q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 23552             ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0|altsyncram_s6q1:auto_generated ; altsyncram_s6q1       ; work         ;
+;    |expanda_top:generator|                ; 7952 (4)            ; 2813 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator                                                               ; expanda_top           ; work         ;
+;       |expanda_controller:controller|     ; 32 (32)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator|expanda_controller:controller                                 ; expanda_controller    ; work         ;
+;       |expanda_output_packer:packer|      ; 401 (401)           ; 178 (178)                 ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer                                  ; expanda_output_packer ; work         ;
+;       |expanda_rej_ntt_poly:sampler|      ; 24 (24)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator|expanda_rej_ntt_poly:sampler                                  ; expanda_rej_ntt_poly  ; work         ;
+;       |expanda_seed_absorb:seed_capture|  ; 13 (13)             ; 262 (262)                 ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator|expanda_seed_absorb:seed_capture                              ; expanda_seed_absorb   ; work         ;
+;       |expanda_shake128:shake|            ; 7200 (7200)         ; 2173 (2173)               ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake                                        ; expanda_shake128      ; work         ;
+;       |expanda_xof_buffer:xof_buffer|     ; 278 (278)           ; 143 (143)                 ; 0                 ; 0          ; 0    ; 0            ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer                                 ; expanda_xof_buffer    ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0|altsyncram_s6q1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 184          ; 128          ; 184          ; 128          ; 23552 ; None ;
++------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|fsm                                                                                                                                                                                                                       ;
++--------------------+--------------+-----------------+----------------+----------------+-------------+------------------+-----------------+-----------------+-----------------+--------------------+------------------+-------------------+-----------------+-------------------+---------------+-------------+
+; Name               ; fsm.ST_ERROR ; fsm.ST_SQ_VALID ; fsm.ST_SQ_READ ; fsm.ST_SQ_IDLE ; fsm.ST_IOTA ; fsm.ST_CHI_WRITE ; fsm.ST_CHI_LOAD ; fsm.ST_RPI_MOVE ; fsm.ST_RPI_LOAD ; fsm.ST_THETA_WRITE ; fsm.ST_THETA_ACC ; fsm.ST_PERM_START ; fsm.ST_PAD_LAST ; fsm.ST_PAD_SUFFIX ; fsm.ST_ABSORB ; fsm.ST_IDLE ;
++--------------------+--------------+-----------------+----------------+----------------+-------------+------------------+-----------------+-----------------+-----------------+--------------------+------------------+-------------------+-----------------+-------------------+---------------+-------------+
+; fsm.ST_IDLE        ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 0           ;
+; fsm.ST_ABSORB      ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 1             ; 1           ;
+; fsm.ST_PAD_SUFFIX  ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 1                 ; 0             ; 1           ;
+; fsm.ST_PAD_LAST    ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 1               ; 0                 ; 0             ; 1           ;
+; fsm.ST_PERM_START  ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 1                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_THETA_ACC   ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 1                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_THETA_WRITE ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 1                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_RPI_LOAD    ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 1               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_RPI_MOVE    ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 1               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_CHI_LOAD    ; 0            ; 0               ; 0              ; 0              ; 0           ; 0                ; 1               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_CHI_WRITE   ; 0            ; 0               ; 0              ; 0              ; 0           ; 1                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_IOTA        ; 0            ; 0               ; 0              ; 0              ; 1           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_SQ_IDLE     ; 0            ; 0               ; 0              ; 1              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_SQ_READ     ; 0            ; 0               ; 1              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_SQ_VALID    ; 0            ; 1               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
+; fsm.ST_ERROR       ; 1            ; 0               ; 0              ; 0              ; 0           ; 0                ; 0               ; 0               ; 0               ; 0                  ; 0                ; 0                 ; 0               ; 0                 ; 0             ; 1           ;
++--------------------+--------------+-----------------+----------------+----------------+-------------+------------------+-----------------+-----------------+-----------------+--------------------+------------------+-------------------+-----------------+-------------------+---------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------+
+; State Machine - |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|perm_return ;
++------------------------+------------------------+--------------------+-------------------------+
+; Name                   ; perm_return.RET_ABSORB ; perm_return.RET_SQ ; perm_return.RET_FINAL   ;
++------------------------+------------------------+--------------------+-------------------------+
+; perm_return.RET_ABSORB ; 0                      ; 0                  ; 0                       ;
+; perm_return.RET_FINAL  ; 1                      ; 0                  ; 1                       ;
+; perm_return.RET_SQ     ; 1                      ; 1                  ; 0                       ;
++------------------------+------------------------+--------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|state                                                ;
++------------------+-------------+---------------+------------------+----------------+--------------+------------------+------------+------------+
+; Name             ; state.DRAIN ; state.SQUEEZE ; state.WAIT_FINAL ; state.FINALIZE ; state.ABSORB ; state.SEED_START ; state.INIT ; state.IDLE ;
++------------------+-------------+---------------+------------------+----------------+--------------+------------------+------------+------------+
+; state.IDLE       ; 0           ; 0             ; 0                ; 0              ; 0            ; 0                ; 0          ; 0          ;
+; state.INIT       ; 0           ; 0             ; 0                ; 0              ; 0            ; 0                ; 1          ; 1          ;
+; state.SEED_START ; 0           ; 0             ; 0                ; 0              ; 0            ; 1                ; 0          ; 1          ;
+; state.ABSORB     ; 0           ; 0             ; 0                ; 0              ; 1            ; 0                ; 0          ; 1          ;
+; state.FINALIZE   ; 0           ; 0             ; 0                ; 1              ; 0            ; 0                ; 0          ; 1          ;
+; state.WAIT_FINAL ; 0           ; 0             ; 1                ; 0              ; 0            ; 0                ; 0          ; 1          ;
+; state.SQUEEZE    ; 0           ; 1             ; 0                ; 0              ; 0            ; 0                ; 0          ; 1          ;
+; state.DRAIN      ; 1           ; 0             ; 0                ; 0              ; 0            ; 0                ; 0          ; 1          ;
++------------------+-------------+---------------+------------------+----------------+--------------+------------------+------------+------------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-------------------------------------------------------------+--------------------+
+; Register name                                               ; Reason for Removal ;
++-------------------------------------------------------------+--------------------+
+; expanda_top:generator|expanda_shake128:shake|fsm~14         ; Lost fanout        ;
+; expanda_top:generator|expanda_shake128:shake|fsm~15         ; Lost fanout        ;
+; expanda_top:generator|expanda_shake128:shake|fsm~16         ; Lost fanout        ;
+; expanda_top:generator|expanda_shake128:shake|fsm~17         ; Lost fanout        ;
+; expanda_top:generator|expanda_controller:controller|state~5 ; Lost fanout        ;
+; expanda_top:generator|expanda_controller:controller|state~6 ; Lost fanout        ;
+; expanda_top:generator|expanda_controller:controller|state~7 ; Lost fanout        ;
+; Total Number of Removed Registers = 7                       ;                    ;
++-------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2825  ;
+; Number of registers using Synchronous Clear  ; 2607  ;
+; Number of registers using Synchronous Load   ; 72    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2588  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                      ;
++------------------------------------------------+-------------------------------------------+------+
+; Register Name                                  ; Megafunction                              ; Type ;
++------------------------------------------------+-------------------------------------------+------+
+; expanda_matrix_buffer:buffer|read_data[0..127] ; expanda_matrix_buffer:buffer|memory_rtl_0 ; RAM  ;
++------------------------------------------------+-------------------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|rpi_step[2]               ;
+; 3:1                ; 128 bits  ; 256 LEs       ; 0 LEs                ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_seed_absorb:seed_capture|seed[204]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |expanda_buffered_top|expanda_matrix_buffer:buffer|buffer_first_row[1]                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|sampled_poly_idx[2] ;
+; 3:1                ; 150 bits  ; 300 LEs       ; 0 LEs                ; 300 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|reservoir[148]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|byte_count[2]      ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_rej_ntt_poly:sampler|coeff_data[21]      ;
+; 3:1                ; 128 bits  ; 256 LEs       ; 0 LEs                ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_seed_absorb:seed_capture|seed[70]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |expanda_buffered_top|expanda_matrix_buffer:buffer|write_addr[7]                             ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|coeff_count[8]      ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|reservoir[0]       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|sampled_word_idx[5] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_rej_ntt_poly:sampler|generated_count[5]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_seed_absorb:seed_capture|input_word[1]   ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|reservoir[141]     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|in_remaining[0]           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|in_remaining[4]           ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|reservoir[134]     ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|reservoir[124]     ;
+; 7:1                ; 99 bits   ; 396 LEs       ; 198 LEs              ; 198 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|reservoir[98]      ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|out_fill[1]               ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|row_base[3]               ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|reservoir[11]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|byte_pos[0]               ;
+; 36:1               ; 64 bits   ; 1536 LEs      ; 1024 LEs             ; 512 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|rpi_carry[9]              ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|lane_index[3]             ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[18]               ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[12]               ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[9]                ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[41]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[38]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[29]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[67]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[59]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[50]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[89]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[82]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[78]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[114]              ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[105]              ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[99]               ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[126]              ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|io_word[5]                ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1314]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1351]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1440]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1474]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1556]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[89]                     ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[161]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[228]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[305]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[330]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[416]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[485]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[565]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[620]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[665]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[731]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[786]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[844]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[919]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[983]                    ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1062]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1112]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1214]                   ;
+; 14:1               ; 63 bits   ; 567 LEs       ; 252 LEs              ; 315 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1245]                   ;
+; 15:1               ; 57 bits   ; 570 LEs       ; 228 LEs              ; 342 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[27]                     ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|a[1]                      ;
+; 18:1               ; 64 bits   ; 768 LEs       ; 512 LEs              ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|scratch[8]                ;
+; 18:1               ; 64 bits   ; 768 LEs       ; 512 LEs              ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|scratch[90]               ;
+; 18:1               ; 64 bits   ; 768 LEs       ; 512 LEs              ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|scratch[179]              ;
+; 18:1               ; 64 bits   ; 768 LEs       ; 512 LEs              ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|scratch[216]              ;
+; 18:1               ; 64 bits   ; 768 LEs       ; 512 LEs              ; 256 LEs                ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|scratch[298]              ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_output_packer:packer|ShiftLeft0          ;
+; 4:1                ; 57 bits   ; 114 LEs       ; 114 LEs              ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 4:1                ; 57 bits   ; 114 LEs       ; 114 LEs              ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 4:1                ; 127 bits  ; 254 LEs       ; 254 LEs              ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_xof_buffer:xof_buffer|Selector115        ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 32:1               ; 64 bits   ; 1344 LEs      ; 1152 LEs             ; 192 LEs                ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|Mux110                    ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight1               ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftLeft2                ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|ShiftRight0               ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|perm_return               ;
+; 20:1               ; 5 bits    ; 65 LEs        ; 30 LEs               ; 35 LEs                 ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|fsm                       ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 12 LEs               ; 16 LEs                 ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|fsm                       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|row_idx[0]         ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|col_idx[0]         ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|state              ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 10 LEs               ; 8 LEs                  ; No         ; |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|state              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Source assignments for expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0|altsyncram_s6q1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                           ;
++---------------------------------+--------------------+------+----------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                            ;
++---------------------------------+--------------------+------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |expanda_buffered_top ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; ROWS           ; 1     ; Untyped                                                     ;
+; PARALLEL_LANES ; 5     ; Untyped                                                     ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: expanda_top:generator ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; PARALLEL_LANES ; 5     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: expanda_top:generator|expanda_shake128:shake ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; PARALLEL_LANES ; 5     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: expanda_matrix_buffer:buffer ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; ROWS           ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0 ;
++------------------------------------+----------------------+-------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                      ;
++------------------------------------+----------------------+-------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                   ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                   ;
+; WIDTH_A                            ; 128                  ; Untyped                                   ;
+; WIDTHAD_A                          ; 8                    ; Untyped                                   ;
+; NUMWORDS_A                         ; 184                  ; Untyped                                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                   ;
+; WIDTH_B                            ; 128                  ; Untyped                                   ;
+; WIDTHAD_B                          ; 8                    ; Untyped                                   ;
+; NUMWORDS_B                         ; 184                  ; Untyped                                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                   ;
+; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped                                   ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                   ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                   ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                   ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                   ;
+; CBXI_PARAMETER                     ; altsyncram_s6q1      ; Untyped                                   ;
++------------------------------------+----------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                 ;
++-------------------------------------------+------------------------------------------------------+
+; Name                                      ; Value                                                ;
++-------------------------------------------+------------------------------------------------------+
+; Number of entity instances                ; 1                                                    ;
+; Entity Instance                           ; expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                            ;
+;     -- WIDTH_A                            ; 128                                                  ;
+;     -- NUMWORDS_A                         ; 184                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                         ;
+;     -- WIDTH_B                            ; 128                                                  ;
+;     -- NUMWORDS_B                         ; 184                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                             ;
++-------------------------------------------+------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "expanda_top:generator|expanda_shake128:shake"                                                  ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; shake_absorb_en ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; shake_ready     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 2825                        ;
+;     ENA               ; 142                         ;
+;     ENA SCLR          ; 2374                        ;
+;     ENA SCLR SLD      ; 72                          ;
+;     SCLR              ; 161                         ;
+;     plain             ; 76                          ;
+; arriav_lcell_comb     ; 7981                        ;
+;     arith             ; 42                          ;
+;         1 data inputs ; 41                          ;
+;         4 data inputs ; 1                           ;
+;     extend            ; 101                         ;
+;         7 data inputs ; 101                         ;
+;     normal            ; 7838                        ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 181                         ;
+;         3 data inputs ; 153                         ;
+;         4 data inputs ; 1095                        ;
+;         5 data inputs ; 3664                        ;
+;         6 data inputs ; 2744                        ;
+; boundary_port         ; 282                         ;
+; stratixv_ram_block    ; 128                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 4.30                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:26     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Copyright (C) 2024  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Oct  8 19:46:53 2026
+Info: Command: quartus_map expanda_row --read_settings_files=on --write_settings_files=off
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_controller.v
+    Info (12023): Found entity 1: expanda_controller File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_controller.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_seed_absorb.v
+    Info (12023): Found entity 1: expanda_seed_absorb File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_seed_absorb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_shake128.v
+    Info (12023): Found entity 1: expanda_shake128 File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_shake128.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_xof_buffer.v
+    Info (12023): Found entity 1: expanda_xof_buffer File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_xof_buffer.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_rej_ntt_poly.v
+    Info (12023): Found entity 1: expanda_rej_ntt_poly File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_rej_ntt_poly.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_output_packer.v
+    Info (12023): Found entity 1: expanda_output_packer File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_output_packer.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_top.v
+    Info (12023): Found entity 1: expanda_top File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_matrix_buffer.v
+    Info (12023): Found entity 1: expanda_matrix_buffer File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_matrix_buffer.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/angelina/documents/ml_dsa/rtl/expanda_buffered_top.v
+    Info (12023): Found entity 1: expanda_buffered_top File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 2
+Info (12127): Elaborating entity "expanda_buffered_top" for the top level hierarchy
+Info (12128): Elaborating entity "expanda_top" for hierarchy "expanda_top:generator" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 30
+Info (12128): Elaborating entity "expanda_controller" for hierarchy "expanda_top:generator|expanda_controller:controller" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 41
+Info (12128): Elaborating entity "expanda_seed_absorb" for hierarchy "expanda_top:generator|expanda_seed_absorb:seed_capture" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 48
+Info (12128): Elaborating entity "expanda_shake128" for hierarchy "expanda_top:generator|expanda_shake128:shake" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 57
+Warning (10230): Verilog HDL assignment warning at expanda_shake128.v(452): truncated value with size 64 to match size of target (8) File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_shake128.v Line: 452
+Info (12128): Elaborating entity "expanda_xof_buffer" for hierarchy "expanda_top:generator|expanda_xof_buffer:xof_buffer" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 63
+Info (12128): Elaborating entity "expanda_rej_ntt_poly" for hierarchy "expanda_top:generator|expanda_rej_ntt_poly:sampler" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 68
+Info (12128): Elaborating entity "expanda_output_packer" for hierarchy "expanda_top:generator|expanda_output_packer:packer" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_top.v Line: 76
+Info (12128): Elaborating entity "expanda_matrix_buffer" for hierarchy "expanda_matrix_buffer:buffer" File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 36
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "expanda_top:generator|expanda_shake128:shake|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_shake128.v Line: 169
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "expanda_matrix_buffer:buffer|memory_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 128
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 184
+        Info (286033): Parameter WIDTH_B set to 128
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 184
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+Info (12130): Elaborated megafunction instantiation "expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0"
+Info (12133): Instantiated megafunction "expanda_matrix_buffer:buffer|altsyncram:memory_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "128"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "184"
+    Info (12134): Parameter "WIDTH_B" = "128"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "184"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s6q1.tdf
+    Info (12023): Found entity 1: altsyncram_s6q1 File: C:/Users/Angelina/Documents/ML_DSA/quartus/expanda_row/db/altsyncram_s6q1.tdf Line: 28
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (15717): Design contains 281 virtual pins; timing numbers associated with paths containing virtual pins are estimates
+    Info (15719): Pin "expand_a_done" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 8
+    Info (15719): Pin "expand_a_error" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 8
+    Info (15719): Pin "read_data[0]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[1]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[2]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[3]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[4]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[5]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[6]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[7]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[8]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[9]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[10]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[11]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[12]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[13]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[14]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[15]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[16]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[17]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[18]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[19]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[20]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[21]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[22]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[23]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[24]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[25]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[26]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[27]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[28]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[29]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[30]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[31]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[32]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[33]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[34]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[35]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[36]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[37]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[38]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[39]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[40]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[41]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[42]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[43]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[44]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[45]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[46]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[47]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[48]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[49]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[50]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[51]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[52]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[53]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[54]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[55]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[56]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[57]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[58]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[59]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[60]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[61]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[62]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[63]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[64]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[65]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[66]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[67]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[68]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[69]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[70]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[71]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[72]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[73]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[74]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[75]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[76]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[77]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[78]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[79]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[80]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[81]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[82]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[83]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[84]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[85]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[86]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[87]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[88]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[89]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[90]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[91]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[92]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[93]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[94]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[95]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[96]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[97]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[98]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[99]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[100]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[101]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[102]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[103]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[104]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[105]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[106]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[107]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[108]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[109]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[110]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[111]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[112]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[113]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[114]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[115]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[116]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[117]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[118]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[119]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[120]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[121]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[122]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[123]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[124]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[125]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[126]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_data[127]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 14
+    Info (15719): Pin "read_valid" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 16
+    Info (15719): Pin "rho_ready" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 6
+    Info (15719): Pin "rho_loaded" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 6
+    Info (15719): Pin "expand_a_ready" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 8
+    Info (15719): Pin "expand_a_busy" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 8
+    Info (15719): Pin "buffer_valid" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 9
+    Info (15719): Pin "buffer_first_row[0]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 10
+    Info (15719): Pin "buffer_first_row[1]" is virtual output pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 10
+    Info (15718): Pin "rst" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 3
+    Info (15718): Pin "read_addr[7]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[3]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[6]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[4]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[5]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "buffer_release" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 11
+    Info (15718): Pin "read_enable" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 12
+    Info (15718): Pin "read_addr[8]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[9]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[0]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[1]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "read_addr[2]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 13
+    Info (15718): Pin "expand_a_start" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 7
+    Info (15718): Pin "rho_valid" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 5
+    Info (15718): Pin "rho_data[0]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[7]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[1]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[8]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[9]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[10]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[2]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[11]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[3]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[12]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[4]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[5]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[6]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[16]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[17]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[13]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[14]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[19]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[20]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[21]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[22]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[18]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[15]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[24]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[31]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[23]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[25]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[32]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[33]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[34]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[26]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[35]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[27]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[36]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[28]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[29]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[30]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[40]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[41]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[37]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[38]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[43]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[44]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[45]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[46]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[42]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[39]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[48]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[55]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[47]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[49]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[56]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[57]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[58]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[50]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[59]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[51]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[60]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[52]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[53]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[54]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[64]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[65]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[61]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[62]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[67]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[68]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[69]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[70]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[66]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[63]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[72]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[79]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[71]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[73]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[80]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[81]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[82]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[74]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[83]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[75]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[84]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[76]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[77]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[78]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[88]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[89]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[85]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[86]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[91]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[92]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[93]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[94]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[90]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[87]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[96]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[103]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[95]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[97]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[104]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[105]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[106]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[98]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[107]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[99]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[108]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[100]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[101]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[102]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[112]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[113]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[109]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[110]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[115]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[116]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[117]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[118]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[114]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[111]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[120]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[119]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[127]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[121]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[122]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[123]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[124]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[125]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+    Info (15718): Pin "rho_data[126]" is virtual input pin File: C:/Users/Angelina/Documents/ML_DSA/rtl/expanda_buffered_top.v Line: 4
+Info (21057): Implemented 8685 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+    Info (21061): Implemented 8556 logic cells
+    Info (21064): Implemented 128 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4944 megabytes
+    Info: Processing ended: Thu Oct  8 19:47:31 2026
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:16
+
+

@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile results/expanda_stream.vcd opened for output.
+PASS: 8192 coefficients, 32 contexts, eight row lifetimes, two jobs.
+tb/tb_expanda_stream.v:131: $finish called at 368490000 (1ps)

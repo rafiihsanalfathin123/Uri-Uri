@@ -1,0 +1,12 @@
+{
+  "coefficient_bits": 23,
+  "coefficients_per_polynomial": 256,
+  "word_bits": 128,
+  "words_per_polynomial": 46,
+  "bytes_per_polynomial": 736,
+  "words_per_matrix": 736,
+  "bytes_per_matrix": 11776,
+  "ordering": "coefficients appended least-significant bit first; polynomial boundaries word-aligned",
+  "vector_jobs": 3,
+  "words": 2208
+}

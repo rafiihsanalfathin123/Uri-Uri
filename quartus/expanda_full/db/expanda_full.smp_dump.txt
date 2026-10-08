@@ -1,0 +1,36 @@
+
+State Machine - |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|fsm
+Name fsm.ST_ERROR fsm.ST_SQ_VALID fsm.ST_SQ_READ fsm.ST_SQ_IDLE fsm.ST_IOTA fsm.ST_CHI_WRITE fsm.ST_CHI_LOAD fsm.ST_RPI_MOVE fsm.ST_RPI_LOAD fsm.ST_THETA_WRITE fsm.ST_THETA_ACC fsm.ST_PERM_START fsm.ST_PAD_LAST fsm.ST_PAD_SUFFIX fsm.ST_ABSORB fsm.ST_IDLE 
+fsm.ST_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+fsm.ST_ABSORB 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+fsm.ST_PAD_SUFFIX 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+fsm.ST_PAD_LAST 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+fsm.ST_PERM_START 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+fsm.ST_THETA_ACC 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+fsm.ST_THETA_WRITE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+fsm.ST_RPI_LOAD 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+fsm.ST_RPI_MOVE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+fsm.ST_CHI_LOAD 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+fsm.ST_CHI_WRITE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+fsm.ST_IOTA 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+fsm.ST_SQ_IDLE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+fsm.ST_SQ_READ 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fsm.ST_SQ_VALID 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fsm.ST_ERROR 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |expanda_buffered_top|expanda_top:generator|expanda_shake128:shake|perm_return
+Name perm_return.RET_ABSORB perm_return.RET_SQ perm_return.RET_FINAL 
+perm_return.RET_ABSORB 0 0 0 
+perm_return.RET_FINAL 1 0 1 
+perm_return.RET_SQ 1 1 0 
+
+State Machine - |expanda_buffered_top|expanda_top:generator|expanda_controller:controller|state
+Name state.DRAIN state.SQUEEZE state.WAIT_FINAL state.FINALIZE state.ABSORB state.SEED_START state.INIT state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.INIT 0 0 0 0 0 0 1 1 
+state.SEED_START 0 0 0 0 0 1 0 1 
+state.ABSORB 0 0 0 0 1 0 0 1 
+state.FINALIZE 0 0 0 1 0 0 0 1 
+state.WAIT_FINAL 0 0 1 0 0 0 0 1 
+state.SQUEEZE 0 1 0 0 0 0 0 1 
+state.DRAIN 1 0 0 0 0 0 0 1 

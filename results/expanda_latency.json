@@ -1,0 +1,482 @@
+{
+  "source": "results/expanda_integrated.vcd",
+  "time_unit": "ps",
+  "simulated_clock_period_ps": 10000,
+  "jobs": [
+    {
+      "job": 0,
+      "acceptance_ps": 1095000,
+      "rows": [
+        {
+          "row": 0,
+          "publication_ps": 554695000,
+          "generation_cycles": 55360,
+          "cycles_since_acceptance": 55360,
+          "release_ps": 558175000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 1,
+          "publication_ps": 1111775000,
+          "generation_cycles": 55360,
+          "cycles_since_acceptance": 111068,
+          "release_ps": 1115255000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 2,
+          "publication_ps": 1668855000,
+          "generation_cycles": 55360,
+          "cycles_since_acceptance": 166776,
+          "release_ps": 1672335000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 3,
+          "publication_ps": 2225975000,
+          "generation_cycles": 55364,
+          "cycles_since_acceptance": 222488,
+          "release_ps": 2229455000,
+          "consumer_hold_cycles": 348
+        }
+      ],
+      "polynomials": [
+        {
+          "row": 0,
+          "col": 0,
+          "request_ps": 1105000,
+          "completion_ps": 139485000,
+          "cycles": 13838
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "request_ps": 139505000,
+          "completion_ps": 277885000,
+          "cycles": 13838
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "request_ps": 277905000,
+          "completion_ps": 416285000,
+          "cycles": 13838
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "request_ps": 416305000,
+          "completion_ps": 554685000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "request_ps": 558185000,
+          "completion_ps": 696565000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "request_ps": 696585000,
+          "completion_ps": 834965000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "request_ps": 834985000,
+          "completion_ps": 973365000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "request_ps": 973385000,
+          "completion_ps": 1111765000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "request_ps": 1115265000,
+          "completion_ps": 1253645000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "request_ps": 1253665000,
+          "completion_ps": 1392045000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "request_ps": 1392065000,
+          "completion_ps": 1530445000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "request_ps": 1530465000,
+          "completion_ps": 1668845000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "request_ps": 1672345000,
+          "completion_ps": 1810725000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "request_ps": 1810745000,
+          "completion_ps": 1949165000,
+          "cycles": 13842
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "request_ps": 1949185000,
+          "completion_ps": 2087565000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "request_ps": 2087585000,
+          "completion_ps": 2225965000,
+          "cycles": 13838
+        }
+      ],
+      "generation_cycles": 221444,
+      "final_publication_cycles": 222488,
+      "consumer_hold_cycles": 1392,
+      "job_done_cycles": 222836
+    },
+    {
+      "job": 1,
+      "acceptance_ps": 2229505000,
+      "rows": [
+        {
+          "row": 0,
+          "publication_ps": 2783225000,
+          "generation_cycles": 55372,
+          "cycles_since_acceptance": 55372,
+          "release_ps": 2786705000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 1,
+          "publication_ps": 3340305000,
+          "generation_cycles": 55360,
+          "cycles_since_acceptance": 111080,
+          "release_ps": 3343785000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 2,
+          "publication_ps": 3897385000,
+          "generation_cycles": 55360,
+          "cycles_since_acceptance": 166788,
+          "release_ps": 3900865000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 3,
+          "publication_ps": 4454575000,
+          "generation_cycles": 55371,
+          "cycles_since_acceptance": 222507,
+          "release_ps": 4458055000,
+          "consumer_hold_cycles": 348
+        }
+      ],
+      "polynomials": [
+        {
+          "row": 0,
+          "col": 0,
+          "request_ps": 2229515000,
+          "completion_ps": 2367935000,
+          "cycles": 13842
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "request_ps": 2367955000,
+          "completion_ps": 2506335000,
+          "cycles": 13838
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "request_ps": 2506355000,
+          "completion_ps": 2644775000,
+          "cycles": 13842
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "request_ps": 2644795000,
+          "completion_ps": 2783215000,
+          "cycles": 13842
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "request_ps": 2786715000,
+          "completion_ps": 2925095000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "request_ps": 2925115000,
+          "completion_ps": 3063495000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "request_ps": 3063515000,
+          "completion_ps": 3201895000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "request_ps": 3201915000,
+          "completion_ps": 3340295000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "request_ps": 3343795000,
+          "completion_ps": 3482175000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "request_ps": 3482195000,
+          "completion_ps": 3620575000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "request_ps": 3620595000,
+          "completion_ps": 3758975000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "request_ps": 3758995000,
+          "completion_ps": 3897375000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "request_ps": 3900875000,
+          "completion_ps": 4039255000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "request_ps": 4039275000,
+          "completion_ps": 4177655000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "request_ps": 4177675000,
+          "completion_ps": 4316095000,
+          "cycles": 13842
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "request_ps": 4316115000,
+          "completion_ps": 4454565000,
+          "cycles": 13845
+        }
+      ],
+      "generation_cycles": 221463,
+      "final_publication_cycles": 222507,
+      "consumer_hold_cycles": 1392,
+      "job_done_cycles": 222855
+    },
+    {
+      "job": 2,
+      "acceptance_ps": 4458105000,
+      "rows": [
+        {
+          "row": 0,
+          "publication_ps": 5011775000,
+          "generation_cycles": 55367,
+          "cycles_since_acceptance": 55367,
+          "release_ps": 5015255000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 1,
+          "publication_ps": 5568895000,
+          "generation_cycles": 55364,
+          "cycles_since_acceptance": 111079,
+          "release_ps": 5572375000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 2,
+          "publication_ps": 6126065000,
+          "generation_cycles": 55369,
+          "cycles_since_acceptance": 166796,
+          "release_ps": 6129545000,
+          "consumer_hold_cycles": 348
+        },
+        {
+          "row": 3,
+          "publication_ps": 6683185000,
+          "generation_cycles": 55364,
+          "cycles_since_acceptance": 222508,
+          "release_ps": 6686665000,
+          "consumer_hold_cycles": 348
+        }
+      ],
+      "polynomials": [
+        {
+          "row": 0,
+          "col": 0,
+          "request_ps": 4458115000,
+          "completion_ps": 4596495000,
+          "cycles": 13838
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "request_ps": 4596515000,
+          "completion_ps": 4734965000,
+          "cycles": 13845
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "request_ps": 4734985000,
+          "completion_ps": 4873365000,
+          "cycles": 13838
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "request_ps": 4873385000,
+          "completion_ps": 5011765000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "request_ps": 5015265000,
+          "completion_ps": 5153685000,
+          "cycles": 13842
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "request_ps": 5153705000,
+          "completion_ps": 5292085000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "request_ps": 5292105000,
+          "completion_ps": 5430485000,
+          "cycles": 13838
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "request_ps": 5430505000,
+          "completion_ps": 5568885000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "request_ps": 5572385000,
+          "completion_ps": 5710815000,
+          "cycles": 13843
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "request_ps": 5710835000,
+          "completion_ps": 5849215000,
+          "cycles": 13838
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "request_ps": 5849235000,
+          "completion_ps": 5987655000,
+          "cycles": 13842
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "request_ps": 5987675000,
+          "completion_ps": 6126055000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "request_ps": 6129555000,
+          "completion_ps": 6267935000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "request_ps": 6267955000,
+          "completion_ps": 6406335000,
+          "cycles": 13838
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "request_ps": 6406355000,
+          "completion_ps": 6544775000,
+          "cycles": 13842
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "request_ps": 6544795000,
+          "completion_ps": 6683175000,
+          "cycles": 13838
+        }
+      ],
+      "generation_cycles": 221464,
+      "final_publication_cycles": 222508,
+      "consumer_hold_cycles": 1392,
+      "job_done_cycles": 222856
+    }
+  ],
+  "mean_generation_cycles": 221457,
+  "frequency_assumptions_MHz": [
+    50,
+    100,
+    200
+  ],
+  "note": "Clock-to-time projections are conditional; FPGA Fmax is unmeasured."
+}

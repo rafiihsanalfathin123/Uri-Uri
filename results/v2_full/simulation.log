@@ -1,0 +1,2 @@
+﻿PASS: buffered ROWS=4, 2208 packed words / 12288 coefficients, 3 matrices, ownership, read latency and bounds
+tb/tb_expanda_buffered.v:78: $finish called at 3120970000 (1ps)

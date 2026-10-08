@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile results/v2_fast/expanda.vcd opened for output.
+PASS: V2 Verilog lanes=5, 16384 coefficients / 2944 packed words, 64 contexts, abort/restart, output and SHAKE stalls, sticky-error recovery
+tb/tb_expanda_v2.v:206: $finish called at 4188690000 (1ps)

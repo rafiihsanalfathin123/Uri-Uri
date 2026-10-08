@@ -1,0 +1,4 @@
+﻿VCD info: dumpfile results/expanda_benchmark.vcd opened for output.
+PASS: both samplers match 4096 SHAKE-derived coefficients.
+SAMPLER_ONLY: upstream total=2594 cycles; new plus serializer total=17443 cycles (16 sequential polynomials).
+tb/tb_expanda_benchmark.v:89: $finish called at 174911000 (1ps)

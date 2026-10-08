@@ -1,0 +1,118 @@
+{
+  "method": "Standalone virtual-pin IP; clock-only SDC; no board I/O timing",
+  "device": "5CSEBA6U23I7",
+  "target_clock_mhz": 100,
+  "fitter_seed": 1,
+  "parallel_lanes": 5,
+  "source_sha256": {
+    "rtl/expanda_controller.v": "3f81fc86bc9b85c03a002f75fe6c97a341dc0c0a7bf09185fd5239dd9a485ed0",
+    "rtl/expanda_seed_absorb.v": "118d6def0cb727b498de5380655c66b97887afc2865dbaaddaa45099e556f8d0",
+    "rtl/expanda_shake128.v": "fe579d9b66320db96996f9488a9a4c794402dc4e7692f682a68c5d87b80f7389",
+    "rtl/expanda_xof_buffer.v": "9a3a8bc7f95ece38ced037089aded367cd4d4e952f8c8c63c00f57e6e017fdb6",
+    "rtl/expanda_rej_ntt_poly.v": "0f208d30d5e341c8383360d4d6f5f501bc3634f983b4bcb24bdf32d950a0e200",
+    "rtl/expanda_output_packer.v": "87af6a42eda9ec25dccafb916086c68d190b3f2263f5bb0539e79670616d53cd",
+    "rtl/expanda_top.v": "8d22ebdf16aa5eb802f979fe2fb93163871cd10fc2bf225e014901a940baaa92",
+    "rtl/expanda_matrix_buffer.v": "fd87cc27a8e7e17f4e1056e86b5c3430b101305afc52d4523ea9e68ba6b40b6d",
+    "rtl/expanda_buffered_top.v": "497cc8e7ceb2adcf8d43d8dc2bae33abad6519acc269f45a3e7e65f2ebbc5a52"
+  },
+  "variants": {
+    "row": {
+      "alms": 5985,
+      "registers": 2825,
+      "physical_pins": 1,
+      "virtual_pins": 281,
+      "memory_payload_bits": 23552,
+      "ram_blocks": 4,
+      "dsp_blocks": 0,
+      "tool_version": "23.1std.1 Build 993 05/14/2024 SC Lite Edition",
+      "timing_checks_ns": {
+        "Slow 1100mV 100C Model Setup 'clk'": 0.494,
+        "Slow 1100mV 100C Model Hold 'clk'": 0.371,
+        "Slow 1100mV 100C Model Minimum Pulse Width 'clk'": 3.737,
+        "Slow 1100mV -40C Model Setup 'clk'": 0.646,
+        "Slow 1100mV -40C Model Hold 'clk'": 0.325,
+        "Slow 1100mV -40C Model Minimum Pulse Width 'clk'": 3.77,
+        "Fast 1100mV 100C Model Setup 'clk'": 4.386,
+        "Fast 1100mV 100C Model Hold 'clk'": 0.16,
+        "Fast 1100mV 100C Model Minimum Pulse Width 'clk'": 3.585,
+        "Fast 1100mV -40C Model Setup 'clk'": 5.366,
+        "Fast 1100mV -40C Model Hold 'clk'": 0.142,
+        "Fast 1100mV -40C Model Minimum Pulse Width 'clk'": 3.54
+      },
+      "worst_setup_ns": 0.494,
+      "worst_hold_ns": 0.142,
+      "slow_corner_fmax_mhz": {
+        "100C": 105.2,
+        "-40C": 106.91
+      },
+      "slow_corner_restricted_fmax_mhz": {
+        "100C": 105.2,
+        "-40C": 106.91
+      },
+      "unconstrained_ports": {
+        "input": {
+          "setup": 143,
+          "hold": 143
+        },
+        "output": {
+          "setup": 138,
+          "hold": 138
+        }
+      }
+    },
+    "full": {
+      "alms": 5922,
+      "registers": 2827,
+      "physical_pins": 1,
+      "virtual_pins": 281,
+      "memory_payload_bits": 94208,
+      "ram_blocks": 13,
+      "dsp_blocks": 0,
+      "tool_version": "23.1std.1 Build 993 05/14/2024 SC Lite Edition",
+      "timing_checks_ns": {
+        "Slow 1100mV 100C Model Setup 'clk'": 0.708,
+        "Slow 1100mV 100C Model Hold 'clk'": 0.369,
+        "Slow 1100mV 100C Model Minimum Pulse Width 'clk'": 3.615,
+        "Slow 1100mV -40C Model Setup 'clk'": 0.743,
+        "Slow 1100mV -40C Model Hold 'clk'": 0.305,
+        "Slow 1100mV -40C Model Minimum Pulse Width 'clk'": 3.54,
+        "Fast 1100mV 100C Model Setup 'clk'": 4.594,
+        "Fast 1100mV 100C Model Hold 'clk'": 0.177,
+        "Fast 1100mV 100C Model Minimum Pulse Width 'clk'": 3.791,
+        "Fast 1100mV -40C Model Setup 'clk'": 5.499,
+        "Fast 1100mV -40C Model Hold 'clk'": 0.132,
+        "Fast 1100mV -40C Model Minimum Pulse Width 'clk'": 3.783
+      },
+      "worst_setup_ns": 0.708,
+      "worst_hold_ns": 0.132,
+      "slow_corner_fmax_mhz": {
+        "100C": 107.62,
+        "-40C": 108.03
+      },
+      "slow_corner_restricted_fmax_mhz": {
+        "100C": 107.62,
+        "-40C": 108.03
+      },
+      "unconstrained_ports": {
+        "input": {
+          "setup": 143,
+          "hold": 143
+        },
+        "output": {
+          "setup": 138,
+          "hold": 138
+        }
+      }
+    }
+  },
+  "memory_payload_reduction_percent": 75.0,
+  "ram_block_reduction_percent": 69.23076923076923,
+  "unstalled_producer_done_cycles": [
+    103069,
+    103122,
+    103122
+  ],
+  "mean_cycles": 103104.33333333333,
+  "projected_latency_ms_at_100mhz": 1.0310433333333333,
+  "development_sources_still_match_snapshot": true
+}

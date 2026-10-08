@@ -1,0 +1,2 @@
+﻿PASS: units 256 coefficients, 46 packed words, 18 rejects, q boundaries/high-bit masking, cross-word candidates, stalls and partial reset
+tb/tb_expanda_units.v:69: $finish called at 4790000 (1ps)

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1530" height="654" viewBox="0 0 1530 654">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#17324d}.label{font-family:monospace;font-size:15px}</style>
+<text x="25" y="35" font-size="25" font-weight="bold">Actual Questa simulation: packed output remains stable during backpressure</text>
+<text x="25" y="66" font-size="17">Stress job, first word: output_valid=1 and output_ready=0 hold data and both indices.</text>
+<text x="25" y="91" font-size="15">Source: results/v2_fast/expanda.vcd · Questa Intel FPGA Starter 2023.3 · 10 ns clock</text>
+<path d="M190.00,100 V609" stroke="#e2e9ef"/>
+<text x="190.00" y="634" text-anchor="middle" font-size="14">3117.875 us</text>
+<path d="M352.50,100 V609" stroke="#e2e9ef"/>
+<text x="352.50" y="634" text-anchor="middle" font-size="14">3118.088 us</text>
+<path d="M515.00,100 V609" stroke="#e2e9ef"/>
+<text x="515.00" y="634" text-anchor="middle" font-size="14">3118.300 us</text>
+<path d="M677.50,100 V609" stroke="#e2e9ef"/>
+<text x="677.50" y="634" text-anchor="middle" font-size="14">3118.512 us</text>
+<path d="M840.00,100 V609" stroke="#e2e9ef"/>
+<text x="840.00" y="634" text-anchor="middle" font-size="14">3118.725 us</text>
+<path d="M1002.50,100 V609" stroke="#e2e9ef"/>
+<text x="1002.50" y="634" text-anchor="middle" font-size="14">3118.938 us</text>
+<path d="M1165.00,100 V609" stroke="#e2e9ef"/>
+<text x="1165.00" y="634" text-anchor="middle" font-size="14">3119.150 us</text>
+<path d="M1327.50,100 V609" stroke="#e2e9ef"/>
+<text x="1327.50" y="634" text-anchor="middle" font-size="14">3119.363 us</text>
+<path d="M1490.00,100 V609" stroke="#e2e9ef"/>
+<text x="1490.00" y="634" text-anchor="middle" font-size="14">3119.575 us</text>
+<text x="20" y="134" class="label">start</text>
+<path d="M190.00,144H1490.00" fill="none" stroke="#087b72" stroke-width="2.5"/>
+<text x="20" y="192" class="label">busy</text>
+<path d="M190.00,175H1490.00" fill="none" stroke="#087b72" stroke-width="2.5"/>
+<text x="20" y="250" class="label">output_valid</text>
+<path d="M190.00,260H251.18V233H1405.88V260H1451.76V233H1459.41V260H1490.00" fill="none" stroke="#087b72" stroke-width="2.5"/>
+<text x="20" y="308" class="label">output_ready</text>
+<path d="M190.00,291H255.00V318H1402.06V291H1490.00" fill="none" stroke="#087b72" stroke-width="2.5"/>
+<text x="20" y="366" class="label">poly_idx</text>
+<path d="M190.00,349 H1490.00 M190.00,376 H1490.00 M190.00,349 V376" stroke="#315caa" fill="none"/>
+<text x="840.00" y="368" text-anchor="middle" class="label">0</text>
+<text x="20" y="424" class="label">word_idx</text>
+<path d="M190.00,407 H1405.88 M190.00,434 H1405.88 M190.00,407 V434" stroke="#315caa" fill="none"/>
+<text x="797.94" y="426" text-anchor="middle" class="label">0</text>
+<path d="M1405.88,407 H1459.41 M1405.88,434 H1459.41 M1405.88,407 V434" stroke="#315caa" fill="none"/>
+<text x="1432.65" y="426" text-anchor="middle" class="label">1</text>
+<path d="M1459.41,407 H1490.00 M1459.41,434 H1490.00 M1459.41,407 V434" stroke="#315caa" fill="none"/>
+<text x="1474.71" y="426" text-anchor="middle" class="label">2</text>
+<text x="20" y="482" class="label">output_last</text>
+<path d="M190.00,492H1490.00" fill="none" stroke="#087b72" stroke-width="2.5"/>
+<text x="20" y="540" class="label">output_data</text>
+<path d="M190.00,523 H251.18 M190.00,550 H251.18 M190.00,523 V550" stroke="#315caa" fill="none"/>
+<path d="M251.18,523 H1405.88 M251.18,550 H1405.88 M251.18,523 V550" stroke="#315caa" fill="none"/>
+<text x="828.53" y="542" text-anchor="middle" class="label">944f7cbb985428e4dd66bbff5578a1e1</text>
+<path d="M1405.88,523 H1413.53 M1405.88,550 H1413.53 M1405.88,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1413.53,523 H1421.18 M1413.53,550 H1421.18 M1413.53,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1421.18,523 H1428.82 M1421.18,550 H1428.82 M1421.18,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1428.82,523 H1444.12 M1428.82,550 H1444.12 M1428.82,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1444.12,523 H1451.76 M1444.12,550 H1451.76 M1444.12,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1451.76,523 H1459.41 M1451.76,550 H1459.41 M1451.76,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1459.41,523 H1467.06 M1459.41,550 H1467.06 M1459.41,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1467.06,523 H1474.71 M1467.06,550 H1474.71 M1467.06,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1474.71,523 H1482.35 M1474.71,550 H1482.35 M1474.71,523 V550" stroke="#315caa" fill="none"/>
+<path d="M1482.35,523 H1490.00 M1482.35,550 H1490.00 M1482.35,523 V550" stroke="#315caa" fill="none"/>
+</svg>

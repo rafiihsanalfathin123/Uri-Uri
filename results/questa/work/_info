@@ -1,0 +1,211 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/Angelina/Documents/ML_DSA
+T_opt
+!s110 1791463103
+VUgoZ[ab:loAjXVEmF2mKX1
+04 13 4 work tb_expanda_v2 fast 0
+=1-d0577e298ecf-6ac78ebf-5c-eba8
+R1
+!s12b OEM100
+!s124 OEM10U8 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vexpanda_controller
+Z4 2rtl/expanda_controller.v|rtl/expanda_seed_absorb.v|rtl/expanda_shake128.v|rtl/expanda_xof_buffer.v|rtl/expanda_rej_ntt_poly.v|rtl/expanda_output_packer.v|rtl/expanda_top.v|tb/tb_expanda_v2.v
+Z5 !s110 1791463102
+!i10b 1
+!s100 2[^:kzOO1KE^8eC67S1YJ2
+I7Y8h`8dBb>bj1a3aAH>B>0
+R2
+Z6 w1791461244
+8rtl/expanda_controller.v
+Frtl/expanda_controller.v
+!i122 1
+L0 2 50
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z9 !s108 1791463102.000000
+Z10 !s107 tb/tb_expanda_v2.v|rtl/expanda_top.v|rtl/expanda_output_packer.v|rtl/expanda_rej_ntt_poly.v|rtl/expanda_xof_buffer.v|rtl/expanda_shake128.v|rtl/expanda_seed_absorb.v|rtl/expanda_controller.v|
+Z11 !s90 -work|work|rtl/expanda_controller.v|rtl/expanda_seed_absorb.v|rtl/expanda_shake128.v|rtl/expanda_xof_buffer.v|rtl/expanda_rej_ntt_poly.v|rtl/expanda_output_packer.v|rtl/expanda_top.v|tb/tb_expanda_v2.v|
+!i113 0
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vexpanda_output_packer
+R4
+R5
+!i10b 1
+!s100 AAWRXYfkgLcF5VSg1MQFN1
+I61^>3JAb=Ik1>;BV8>>d@0
+R2
+Z13 w1791461246
+8rtl/expanda_output_packer.v
+Frtl/expanda_output_packer.v
+!i122 1
+L0 3 52
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vexpanda_rej_ntt_poly
+R4
+R5
+!i10b 1
+!s100 o;4RALi>8S:Se3_zP=jnm3
+IbdP7oW3[;9[WT>fCA1LXG3
+R2
+w1791461245
+8rtl/expanda_rej_ntt_poly.v
+Frtl/expanda_rej_ntt_poly.v
+!i122 1
+L0 3 35
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vexpanda_seed_absorb
+R4
+R5
+!i10b 1
+!s100 Aai2VH]<HgFm^70lT4]R80
+IH`E>cc`Mn[Q1g305OP6R=1
+R2
+R6
+8rtl/expanda_seed_absorb.v
+Frtl/expanda_seed_absorb.v
+!i122 1
+L0 3 42
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vexpanda_shake128
+R4
+R5
+!i10b 1
+!s100 =iYOA=maOJjBjA4kNGiQ<1
+IASW8?4AkUA4JlVnCCV:RF1
+R2
+Z14 w1791462562
+8rtl/expanda_shake128.v
+Frtl/expanda_shake128.v
+!i122 1
+L0 31 463
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vexpanda_top
+R4
+R5
+!i10b 1
+!s100 2WzPhzaSUR6RC@1lB9Rn]3
+IMlBFK>NY0SZ3fYAF2fzMN2
+R2
+R13
+8rtl/expanda_top.v
+Frtl/expanda_top.v
+!i122 1
+L0 3 75
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vexpanda_xof_buffer
+R4
+R5
+!i10b 1
+!s100 5>f:LIS<Mg;SEdc1GMn1g2
+I2DS2Q4IHE8ni01J5[Dh2`2
+R2
+w1791462561
+8rtl/expanda_xof_buffer.v
+Frtl/expanda_xof_buffer.v
+!i122 1
+L0 3 30
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vtb_expanda_v2
+R4
+R5
+!i10b 1
+!s100 J>[_J`?Zi@l;TA6NDRH;Y2
+IaP[m5CK=m3[LaL9oBEO9h2
+R2
+R14
+8tb/tb_expanda_v2.v
+Ftb/tb_expanda_v2.v
+!i122 1
+L0 5 205
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3

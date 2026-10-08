@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="598" viewBox="0 0 1280 598">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#243447} .label{font-family:monospace;font-size:14px}</style>
+<text x="24" y="30" font-size="20" font-weight="bold">Live SHAKE integration: seed and indices absorbed as 16 + 16 + 2 bytes</text>
+<text x="24" y="54" font-size="13">Actual Icarus VCD transitions · source: expanda_integrated.vcd · testbench clock: 10 ns</text>
+<path d="M180.00 78V556" stroke="#e4eaf0"/>
+<text x="180.00" y="576" text-anchor="middle" font-size="12">1.00 µs</text>
+<path d="M307.50 78V556" stroke="#e4eaf0"/>
+<text x="307.50" y="576" text-anchor="middle" font-size="12">1.10 µs</text>
+<path d="M435.00 78V556" stroke="#e4eaf0"/>
+<text x="435.00" y="576" text-anchor="middle" font-size="12">1.20 µs</text>
+<path d="M562.50 78V556" stroke="#e4eaf0"/>
+<text x="562.50" y="576" text-anchor="middle" font-size="12">1.30 µs</text>
+<path d="M690.00 78V556" stroke="#e4eaf0"/>
+<text x="690.00" y="576" text-anchor="middle" font-size="12">1.40 µs</text>
+<path d="M817.50 78V556" stroke="#e4eaf0"/>
+<text x="817.50" y="576" text-anchor="middle" font-size="12">1.50 µs</text>
+<path d="M945.00 78V556" stroke="#e4eaf0"/>
+<text x="945.00" y="576" text-anchor="middle" font-size="12">1.60 µs</text>
+<path d="M1072.50 78V556" stroke="#e4eaf0"/>
+<text x="1072.50" y="576" text-anchor="middle" font-size="12">1.70 µs</text>
+<path d="M1200.00 78V556" stroke="#e4eaf0"/>
+<text x="1200.00" y="576" text-anchor="middle" font-size="12">1.80 µs</text>
+<text x="18" y="108" class="label">ctrl_state</text>
+<path d="M180.00,95H250.12M180.00,117H250.12M180.00,95V117" stroke="#315caa" fill="none"/>
+<text x="215.06" y="111" text-anchor="middle" class="label">4</text>
+<path d="M250.12,95H313.88M250.12,117H313.88M250.12,95V117" stroke="#315caa" fill="none"/>
+<text x="282.00" y="111" text-anchor="middle" class="label">0</text>
+<path d="M313.88,95H326.62M313.88,117H326.62M313.88,95V117" stroke="#315caa" fill="none"/>
+<path d="M326.62,95H772.88M326.62,117H772.88M326.62,95V117" stroke="#315caa" fill="none"/>
+<text x="549.75" y="111" text-anchor="middle" class="label">2</text>
+<path d="M772.88,95H785.62M772.88,117H785.62M772.88,95V117" stroke="#315caa" fill="none"/>
+<path d="M785.62,95H1200.00M785.62,117H1200.00M785.62,95V117" stroke="#315caa" fill="none"/>
+<text x="992.81" y="111" text-anchor="middle" class="label">4</text>
+<text x="18" y="158" class="label">input_word</text>
+<path d="M180.00,145H250.12M180.00,167H250.12M180.00,145V167" stroke="#315caa" fill="none"/>
+<text x="215.06" y="161" text-anchor="middle" class="label">2</text>
+<path d="M250.12,145H339.38M250.12,167H339.38M250.12,145V167" stroke="#315caa" fill="none"/>
+<text x="294.75" y="161" text-anchor="middle" class="label">0</text>
+<path d="M339.38,145H556.12M339.38,167H556.12M339.38,145V167" stroke="#315caa" fill="none"/>
+<text x="447.75" y="161" text-anchor="middle" class="label">1</text>
+<path d="M556.12,145H1200.00M556.12,167H1200.00M556.12,145V167" stroke="#315caa" fill="none"/>
+<text x="878.06" y="161" text-anchor="middle" class="label">2</text>
+<text x="18" y="208" class="label">shake_init</text>
+<path d="M180.00,217H313.88V195H326.62V217H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="258" class="label">shake_in_valid</text>
+<path d="M180.00,267H326.62V245H772.88V267H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="308" class="label">shake_in_ready</text>
+<path d="M180.00,317H326.62V295H339.38V317H543.38V295H556.12V317H760.12V295H772.88V317H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="358" class="label">shake_in_nbytes</text>
+<path d="M180.00,345H250.12M180.00,367H250.12M180.00,345V367" stroke="#315caa" fill="none"/>
+<text x="215.06" y="361" text-anchor="middle" class="label">02</text>
+<path d="M250.12,345H556.12M250.12,367H556.12M250.12,345V367" stroke="#315caa" fill="none"/>
+<text x="403.12" y="361" text-anchor="middle" class="label">10</text>
+<path d="M556.12,345H1200.00M556.12,367H1200.00M556.12,345V367" stroke="#315caa" fill="none"/>
+<text x="878.06" y="361" text-anchor="middle" class="label">02</text>
+<text x="18" y="408" class="label">shake_finalize</text>
+<path d="M180.00,417H772.88V395H785.62V417H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="458" class="label">shake_phase_done</text>
+<path d="M180.00,467H326.62V445H339.38V467H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+<text x="18" y="508" class="label">shake_squeeze_en</text>
+<path d="M180.00,517H1200.00" fill="none" stroke="#087b72" stroke-width="2"/>
+</svg>

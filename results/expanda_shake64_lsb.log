@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile results/expanda_shake64_lsb.vcd opened for output.
+PASS: 8192 coefficients, 32 contexts, eight row lifetimes, two jobs.
+tb/tb_expanda_stream.v:131: $finish called at 382760000 (1ps)

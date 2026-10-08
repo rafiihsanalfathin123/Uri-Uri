@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile results/expanda_sampler.vcd opened for output.
+PASS: sampler reset, rejection boundaries, output stability through 541 stall cycles, exact 256 termination.
+tb/tb_expanda_sampler.v:62: $finish called at 16460000 (1ps)

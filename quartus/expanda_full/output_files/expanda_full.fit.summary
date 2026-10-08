@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Oct  8 19:51:52 2026
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : expanda_full
+Top-level Entity Name : expanda_buffered_top
+Family : Cyclone V
+Device : 5CSEBA6U23I7
+Timing Models : Final
+Logic utilization (in ALMs) : 5,922 / 41,910 ( 14 % )
+Total registers : 2827
+Total pins : 1 / 314 ( < 1 % )
+Total virtual pins : 281
+Total block memory bits : 94,208 / 5,662,720 ( 2 % )
+Total RAM Blocks : 13 / 553 ( 2 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

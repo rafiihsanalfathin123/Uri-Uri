@@ -1,0 +1,3 @@
+﻿VCD info: dumpfile results/expanda_integrated.vcd opened for output.
+PASS: LIVE SHAKE128 integration, 12288 coefficients, 48 contexts, 3 seeds, 12 row lifetimes, abort/restart, sticky-error recovery, 34-byte absorb and XOF byte scoreboards.
+tb/tb_expanda_integrated.v:176: $finish called at 6687840000 (1ps)
