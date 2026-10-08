@@ -39,7 +39,7 @@ py -3 scripts/analyze_v2.py
 
 Model acuan menggunakan `hashlib.shake_128`. Simulasi produsen memeriksa **16.384 koefisien pada setiap konfigurasi SHAKE**, termasuk pengujian stall dan reset. Pengujian tambahan memeriksa sampler, packing, serta pembacaan dan penggunaan ulang buffer. Rincian tersedia pada [hasil analisis V2](results/v2_analysis.json).
 
-Perintah tersebut menulis ulang vector dan hasil pengujian. Gunakan V2 di atas untuk pengujian utama (desain lama tidak disertakan di repositori).
+Perintah tersebut menulis ulang vector dan hasil pengujian. Gunakan V2 di atas untuk pengujian utama, desain lama membutuhkan dependensi yang tidak disertakan di repositori.
 
 ## Status dan dokumentasi
 
